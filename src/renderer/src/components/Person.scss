@@ -1,0 +1,50 @@
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+.person {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 -0.67rem;
+  // animation: appear 0.1s ease-in;
+  // animation-fill-mode: backwards;
+}
+
+.person--m {
+  background-image: url('../assets/boy.svg');
+}
+
+.person--f {
+  background-image: url('../assets/girl.svg');
+}
+
+.person--green {
+  filter: hue-rotate(120deg) brightness(2);
+}
+
+.person--blue {
+  filter: hue-rotate(210deg) brightness(2);
+}
+
+.person--yellow {
+  filter: hue-rotate(60deg) brightness(10);
+}
+
+.person--pink {
+  filter: hue-rotate(300deg) brightness(2);
+}
+
+.person--red {
+  filter: hue-rotate(360deg) brightness(2);
+}

@@ -1,0 +1,57 @@
+.cabin {
+  width: 4em;
+  height: 5em;
+  border: 3px solid #868b74;
+  background-color: #2e231f;
+  position: relative;
+  z-index: 1;
+
+  transition: top 1s ease-in-out;
+
+  .people {
+    display: flex;
+    height: calc(100% - 1.75rem);
+    justify-content: space-evenly;
+    align-items: flex-end;
+  }
+
+  .indicators {
+    display: flex;
+    font-size: 0.6em;
+    padding: 0.6em 0.5em;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  // door
+  &::after {
+    display: block;
+    content: '';
+    width: 3px;
+    height: calc(5em + 6px);
+    background-color: #2e231f;
+    z-index: 1;
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    transition: transform .5s ease-in-out;
+    transform: scaleY(0.05);
+  }
+  &.cabin--open::after {
+    transform: scaleY(0.85);
+  }
+
+  // cord
+  &::before {
+    content: '';
+    border: 4px dashed #2e231f;
+    border-width: 0 4px;
+    background-color: transparent;
+    width: 1em;
+    position: absolute;
+    left: calc(50% - 0.5rem - 2px);
+    bottom: calc(100% + 3px);
+    height: 100vh;
+    z-index: -1;
+  }
+}

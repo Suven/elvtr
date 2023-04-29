@@ -1,0 +1,24 @@
+.floor {
+  height: 5em;
+  width: 6em;
+  background-color: #2e231f;
+  border-bottom: 3px solid #868b74;
+  border-top: 4px solid #868b74;
+  position: relative;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0.2rem 0.2rem;
+}
+
+.floor-number {
+    position: absolute;
+    font-weight: 200;
+    left: 50%;
+    top: calc(50% - 1.7rem);
+    transform: translateX(-50%);
+    color: #868b74;
+    font-size: 4rem;
+    opacity: 0.1;
+}
